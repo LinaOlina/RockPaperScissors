@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo&family=Lato:ital,wght@0,400;0,700;1,400&family=Roboto+Slab:wght@400;700&display=swap');
+
 * {
     margin:0;
     padding:0;
@@ -5,21 +7,33 @@
 }
 
 body {
-    background-color: rgb(78, 78, 95);
+    
+    background-color: rgb(101, 47, 75);
 }
 
 
 
 header {
-    background-color: rgb(254, 254, 254);
-    padding: 50px;
+    
+    padding: 40px;
+    /*background-image:radial-gradient(#d5d0e2, #670a32);*/
+   background-color: rgb(0, 0, 0);
+    transition: background-color 2s;
+    border:3px solid rgb(70, 70, 70);
+    border-style:dashed;
     
 
 }
+
+header:hover {
+    background-color: rgb(88, 11, 57);
+}
 header > h1 {
-    color:black;
+    color:white;
     text-align: center;
-    animation: type 8s steps(60, end);
+    font-family: 'Roboto Slab', serif;
+    
+    
 }
 
 .score-board {
@@ -34,58 +48,72 @@ header > h1 {
     padding: 15px 20px;
     position: relative;
     text-align: center;
+    font-family: 'Roboto Slab', serif;
+    box-shadow: 20px 20px 10px black;
 
 }
  .badge {
-    background-color: brown;
+    background-color: black;
     color:white;
     font-size: 20px;
-    padding: 2px 10px;
+    box-shadow: 20px 20px 10px black;
  }
 
 #user-lable {
     position: absolute;
     border: 1px solid white;
-    top:30px;
-    left: -100px;
+    bor
+    border-radius: 20px;
+    padding: 20px 50px;
+    top:10px;
+    left: -280px;
 
 }
 
 #computer-lable {
     position: absolute;
+    border-radius: 20px;
     border: 1px solid white;
-    top:30px;
-    left: 235px;
+    padding: 20px 50px;
+    top:10px;
+    left: 320px;
 
 }
 
 .result {
     font-size: 25px;
     color: white;
+    font-family: 'Roboto Slab', serif;
+    
 }
 
 .result > p {
     text-align: center;
     font-weight: bold;
+    
 }
 
 .chocies {
     text-align: center;
     margin: 50px 0;
+
 }
 
+
 .choice {
-    border: 4px solid rgb(16, 23, 55);
+    border: 4px solid rgb(88, 11, 57);
     border-radius: 50%;
     display: inline-block;
     padding: 10px;
-    margin: 0 20px;
+    margin: 0px 60px;
     transition: all 0.8s ease;
+    box-shadow: 20px 20px 10px black;
 }
 
 .choice:hover {
     cursor: pointer;
-    background:rgb(28, 31, 67) ;
+    background:rgb(70, 27, 50) ;
+    
     
 }
 
@@ -95,6 +123,7 @@ header > h1 {
     font-size: 25px;
     font-weight: bold;
     padding: 30px;
+    font-family: 'Roboto Slab', serif;
 
 }
 
