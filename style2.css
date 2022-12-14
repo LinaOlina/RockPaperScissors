@@ -1,0 +1,92 @@
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(101, 47, 75);
+}
+
+.grid-container {
+    display: grid;
+    
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    'header'
+    'userInput'
+}
+
+.grid-header {
+    display: grid;
+    grid-area:header;
+}
+
+.flex-header {
+    display:flex;
+    justify-content: center;
+    display:flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    padding:3%;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1vw;
+}
+
+.grid-input {
+    display: grid;
+    grid-area: userInput;
+    
+}
+.flex-input {
+    
+    display: flex;
+    justify-content: center;
+  
+    color:white;
+    
+    
+    font-family: 'Roboto Slab', serif;
+    font-size: 2vw;
+    width:90%;
+    
+    
+}
+.userInput {
+    display:flex;
+    justify-content: center;
+    background-color: black;
+    margin-top: 35%;
+    padding:5%;
+    border-radius: 3vw;
+
+    
+}
+button {
+    font-family: 'Roboto Slab', serif;
+    width: 10vw;
+    font-size: 1.5vw;
+    margin-left: 10%;
+}
+
+
+@media (max-width: 500px) {
+    .flex-input {
+        font-size: 3vw;
+    }
+    .flex-header{
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 400px) {
+    .flex-input {
+        font-size: 3vw;
+    }
+
+    .flex-header{
+        font-size: 3vw;
+    }
+}
