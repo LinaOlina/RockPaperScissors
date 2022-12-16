@@ -17,7 +17,7 @@ let welcomeUser = document.getElementById('welcome');
 function callMe() {
     let name = document.getElementById('userInput').value;
     sessionStorage.setItem('userName', name);
-    //result_p.innerHTML = 'Welcome ' + name
+    
 
 }
 
@@ -27,9 +27,6 @@ window.onload = function() {
     
 
 }
-
-
-
 
 
 //function that gives you a random number between 0-3, is then applied to the array and gives you 'r', 'p' or 's'.
@@ -53,12 +50,10 @@ function win(userChoice, computerChoice) {
     userScore_span.innerHTML = userScore; //ändrar poängsiffran på hemsidan
     computerScore_span.innerHTML = computerScore;
     const smallUserWord = sessionStorage.getItem('userName').fontsize(2).sub();
-    const smallCompWord = 'comp'.fontsize(2).sub();
+    const smallCompWord = 'Comp'.fontsize(2).sub();
 
     result_p.innerHTML = convertToWord(userChoice)+ smallUserWord + " beats " + convertToWord(computerChoice)+ smallCompWord + ". You win!"
-    if (userScore == rounds) {
-        alert("You won!")
-    }
+   
     console.log("win")
 }
 
@@ -69,18 +64,16 @@ function lose(userChoice, computerChoice) {
     userScore_span.innerHTML = userScore; //ändrar poängsiffran på hemsidan
     computerScore_span.innerHTML = computerScore;
     const smallUserWord = sessionStorage.getItem('userName').fontsize(2).sub();
-    const smallCompWord = 'comp'.fontsize(2).sub();
+    const smallCompWord = 'Comp'.fontsize(2).sub();
 
     result_p.innerHTML = convertToWord(userChoice)+ smallUserWord + " loses to " + convertToWord(computerChoice)+ smallCompWord + ". You lose!"
-    if (computerScore == rounds) {
-        alert("You lost!")
-    }
+   
     console.log("lose")
 }
 function draw(userChoice, computerChoice) {
 
     const smallUserWord = sessionStorage.getItem('userName').fontsize(2).sub();
-    const smallCompWord = 'comp'.fontsize(2).sub();
+    const smallCompWord = 'Comp'.fontsize(2).sub();
 
     result_p.innerHTML = convertToWord(userChoice)+ smallUserWord + " equals " + convertToWord(computerChoice)+ smallCompWord + ". It's a draw!"
     console.log("draw")
